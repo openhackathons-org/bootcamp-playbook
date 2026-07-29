@@ -1,34 +1,8 @@
 # Deployment Guide
 
-## 1. Clone the Repository
+Complete the environment setup in the [README](README.md) first.
 
-```bash
-git clone https://github.com/openhackathons-org/bootcamp-playbook
-cd bootcamp-playbook
-```
-
-## 2. Set Up the Python Environment
-
-Create and activate a virtual environment:
-
-```bash
-uv venv venv
-source venv/bin/activate
-```
-
-Install the project dependencies:
-
-```bash
-uv sync --active
-```
-
-Set your NVIDIA API key:
-
-```bash
-export NVIDIA_API_KEY="your-api-key"
-```
-
-## 3. Install code-server
+## Install code-server
 
 ```bash
 curl -fsSL https://code-server.dev/install.sh | sh
@@ -42,7 +16,7 @@ code-server \
   --install-extension ms-toolsai.jupyter
 ```
 
-## 4. Start code-server
+## Start code-server
 
 From the repository root, run:
 
