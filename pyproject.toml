@@ -3,8 +3,9 @@ name = "workshop-demos"
 version = "0.1.0"
 description = "Hands-on demos for the agentic AI workshop."
 readme = "README.md"
-requires-python = ">=3.10"
+requires-python = ">=3.13,<3.14"
 dependencies = [
+    "arize-phoenix>=19.10.0",
     "duckduckgo-search>=8.0.0",
     "ipykernel>=6.29.0",
     "jupyter>=1.1.0",
@@ -12,6 +13,8 @@ dependencies = [
     "langchain-community>=0.3.0",
     "langchain-openai>=0.3.0",
     "langgraph>=0.2.0",
+    "mcp>=1.0.0",
+    "nvidia-nat[langchain,mcp,phoenix]>=1.8.0",
     "openai>=1.0.0",
 ]
 
