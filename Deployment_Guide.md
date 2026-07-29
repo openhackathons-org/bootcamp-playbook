@@ -1,6 +1,26 @@
 # Deployment Guide
 
-Complete the environment setup in the [README](README.md) first.
+## Set up the environment
+
+From the repository root, create and activate the virtual environment:
+
+```bash
+uv venv venv
+source venv/bin/activate
+uv sync --active
+```
+
+Set your NVIDIA API key:
+
+```bash
+export NVIDIA_API_KEY="your-api-key"
+```
+
+Optional model override for the reasoning controls notebook:
+
+```bash
+export NEMOTRON_MODEL="nvidia/nemotron-3-super-120b-a12b"
+```
 
 ## Install code-server
 
