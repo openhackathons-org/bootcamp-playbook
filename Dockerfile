@@ -9,7 +9,6 @@ ENV VIRTUAL_ENV=/opt/bootcamp-playbook-env \
     UV_LINK_MODE=copy \
     JUPYTER_PLATFORM_DIRS=1 \
     NAT_TELEMETRY_ENABLED=false \
-    MCP_PORT=8000 \
     PHOENIX_PORT=6006
 
 RUN apt-get update \
