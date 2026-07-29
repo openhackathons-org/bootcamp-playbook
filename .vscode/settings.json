@@ -3,6 +3,8 @@
   "python.useEnvironmentsExtension": false,
   "python.linting.enabled": true,
   "python.terminal.executeInFileDir": true,
+  "python.envFile": "${workspaceFolder}/.vscode/notebook.env",
+  "python.terminal.useEnvFile": true,
   "terminal.integrated.cwd": "${workspaceFolder}",
   "jupyter.kernels.excludePythonEnvironments": [
     "/usr/local/bin/python",
