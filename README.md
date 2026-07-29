@@ -14,8 +14,6 @@ The `nemotron/` folder contains hands-on notebooks for using NVIDIA Nemotron mod
 ## Setup
 
 Install dependencies with `uv` from the checked-in `pyproject.toml`.
-For complete environment and code-server instructions, see the
-[Deployment Guide](Deployment_Guide.md).
 
 ```bash
 uv venv venv
@@ -37,26 +35,6 @@ Optional model override for the reasoning controls notebook:
 ```bash
 export NEMOTRON_MODEL="nvidia/nemotron-3-super-120b-a12b"
 ```
-
-### Code Server
-
-Install code-server and the Python and Jupyter extensions:
-
-```bash
-curl -fsSL https://code-server.dev/install.sh | sh
-code-server --install-extension ms-python.python --install-extension ms-toolsai.jupyter
-```
-
-Start code-server without authentication on port 8888:
-
-```bash
-code-server --auth none --port 8888
-```
-
-The checked-in `.vscode/settings.json` selects the `venv` environment created
-above and uses the repository root as the integrated terminal's working
-directory. If you use uv's default `.venv` instead, change
-`python.defaultInterpreterPath` to `${workspaceFolder}/.venv/bin/python`.
 
 ## Running The Demos
 
