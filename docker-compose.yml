@@ -1,0 +1,16 @@
+services:
+  bootcamp-playbook:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    working_dir: /workspace/bootcamp-playbook
+    ports:
+      - "127.0.0.1:8888:8888"
+      - "127.0.0.1:6006:6006"
+    volumes:
+      - .:/workspace/bootcamp-playbook
+    env_file:
+      - .vscode/notebook.env
+    environment:
+      NVIDIA_API_KEY: "${NVIDIA_API_KEY:-}"
+      NEMOTRON_MODEL: "${NEMOTRON_MODEL:-nvidia/nemotron-3-super-120b-a12b}"
