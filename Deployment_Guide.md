@@ -10,8 +10,50 @@ This playbook supports two ways to run the labs:
 Both options require:
 
 - [Git](https://github.com/git-guides/install-git)
-- An NVIDIA API key
+- An [NVIDIA API key](#obtain-an-nvidia-api-key)
 - Ports `8888` (code-server) and `6006` (Phoenix) available on the host
+
+## Obtain an NVIDIA API key
+
+The notebooks call NVIDIA-hosted NIM endpoints through
+`https://integrate.api.nvidia.com/v1`. Complete these steps before using either
+deployment option.
+
+### 1. Sign in to the NVIDIA API Catalog
+
+Open the [NVIDIA API Catalog](https://build.nvidia.com/explore/discover) and
+select **Login**. Sign in with your NVIDIA developer account, or follow the
+registration prompts to create one.
+
+![NVIDIA API Catalog login button and account registration prompt](assets/nvidia-api-catalog-login.png)
+
+*The Login button opens the account registration and sign-in prompt.*
+
+### 2. Select a model and request an API key
+
+Select a hosted model from the catalog. For this workshop, you can open
+[NVIDIA Nemotron 3 Super](https://build.nvidia.com/nvidia/nemotron-3-super-120b-a12b).
+On the model page, select the Python input example or the deployment view, and
+then select **Get API Key**. The exact tabs can vary by model and as the catalog
+interface evolves.
+
+![NVIDIA model deployment page showing the Get API Key button](assets/nvidia-api-key-button.png)
+
+*The model page provides a Get API Key action before the deployment commands.*
+
+### 3. Generate and copy the key
+
+Select **Generate Key**, then copy the generated value and store it in a secure
+location, such as a password manager. NVIDIA API Catalog keys typically begin
+with `nvapi-`. The complete secret might not be displayed again.
+
+> Never add an API key to a notebook, screenshot, committed environment file,
+> shell script, or Git history.
+
+This workshop expects an `NVIDIA_API_KEY` generated at `build.nvidia.com` for
+hosted inference. An NGC personal key is a separate credential commonly used
+to pull NIM containers from `nvcr.io`; it is not required for the hosted
+workflow in this guide.
 
 ## Option 1: Local setup
 
@@ -43,9 +85,8 @@ Load the shared, non-secret notebook settings into the same terminal that will
 start `code-server`:
 
 ```bash
-set -a
 source .vscode/notebook.env
-set +a
+export MCP_PORT NAT_TELEMETRY_ENABLED
 ```
 
 This exports settings such as `MCP_PORT=8000` and
