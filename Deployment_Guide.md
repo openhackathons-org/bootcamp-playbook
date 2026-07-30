@@ -50,22 +50,6 @@ with `nvapi-`. The complete secret might not be displayed again.
 > Never add an API key to a notebook, screenshot, committed environment file,
 > shell script, or Git history.
 
-### 4. Export and verify the key
-
-Export the key in the terminal that will start the local or Docker environment:
-
-```bash
-export NVIDIA_API_KEY="nvapi-your-key"
-```
-
-Verify that the variable is populated without printing the secret:
-
-```bash
-test -n "$NVIDIA_API_KEY" \
-  && echo "NVIDIA_API_KEY is set" \
-  || echo "NVIDIA_API_KEY is missing"
-```
-
 This workshop expects an `NVIDIA_API_KEY` generated at `build.nvidia.com` for
 hosted inference. An NGC personal key is a separate credential commonly used
 to pull NIM containers from `nvcr.io`; it is not required for the hosted
