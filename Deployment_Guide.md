@@ -55,9 +55,6 @@ hosted inference. An NGC personal key is a separate credential commonly used
 to pull NIM containers from `nvcr.io`; it is not required for the hosted
 workflow in this guide.
 
-> Screenshot source: [Agentic AI Bootcamp — Inference Endpoint notebook](https://github.com/openhackathons-org/agentic-ai-bootcamp/blob/main/tutorial/jupyter_notebook/01_inference_endpoint.ipynb).
-> The catalog interface may change over time.
-
 ## Option 1: Local setup
 
 ### Prerequisites
