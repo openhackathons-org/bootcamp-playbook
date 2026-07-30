@@ -26,8 +26,8 @@ RUN python -m venv "${VIRTUAL_ENV}" \
 
 WORKDIR /workspace/bootcamp-playbook
 
-COPY pyproject.toml uv.lock ./
-RUN uv sync --active --frozen --no-cache
+COPY pyproject.toml ./
+RUN uv sync --active --no-cache
 
 RUN python -m ipykernel install \
     --sys-prefix \

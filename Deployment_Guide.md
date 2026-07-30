@@ -4,7 +4,7 @@ This playbook supports two ways to run the labs:
 
 1. **Local setup:** create a Python environment and run `code-server` on the
    host.
-2. **Docker Compose:** run Python, the locked dependencies, and `code-server`
+2. **Docker Compose:** run Python, the project dependencies, and `code-server`
    in a container.
 
 Both options require:
@@ -28,7 +28,7 @@ From the repository root, run:
 ```bash
 uv venv --python 3.13 venv
 source venv/bin/activate
-uv sync --active --frozen
+uv sync --active
 ```
 
 The project requires Python 3.13. If it is not installed, install it with:
@@ -106,10 +106,10 @@ Stop code-server with `Ctrl+C`.
 
 ## Option 2: Docker Compose
 
-Docker Compose provides the most reproducible setup. The image contains Python
-3.13, the dependencies locked in `uv.lock`, code-server, and the Python and
-Jupyter extensions. A local GPU is not required when the notebooks call a
-remote NVIDIA NIM endpoint.
+Docker Compose provides a reproducible setup. The image contains Python 3.13,
+the project dependencies, code-server, and the Python and Jupyter extensions.
+A local GPU is not required when the notebooks call a remote NVIDIA NIM
+endpoint.
 
 ### Prerequisites
 
@@ -180,8 +180,8 @@ Port `8000` is available inside the container but is not published to the
 host. This avoids conflicts with services already using host port `8000`.
 
 The repository is bind-mounted into the container, so source and notebook
-changes appear immediately. Rebuild the image after changing `pyproject.toml`,
-`uv.lock`, or the Dockerfile:
+changes appear immediately. Rebuild the image after changing `pyproject.toml`
+or the Dockerfile:
 
 ```bash
 docker compose up --build -d
