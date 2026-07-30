@@ -41,5 +41,4 @@ RUN curl -fsSL https://code-server.dev/install.sh | sh -s -- --version "${CODE_S
 
 EXPOSE 8888 6006 8000
 
-ENTRYPOINT ["tini", "--"]
 CMD ["code-server", "--bind-addr", "0.0.0.0:8888", "--auth", "none", "/workspace/bootcamp-playbook"]
