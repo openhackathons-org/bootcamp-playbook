@@ -1,5 +1,5 @@
 {
-  "python.defaultInterpreterPath": "${workspaceFolder}/venv/bin/python",
+  "python.defaultInterpreterPath": "${env:VIRTUAL_ENV}/bin/python",
   "python.useEnvironmentsExtension": false,
   "python.linting.enabled": true,
   "python.terminal.executeInFileDir": true,
