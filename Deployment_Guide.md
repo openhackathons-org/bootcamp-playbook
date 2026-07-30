@@ -86,10 +86,10 @@ start `code-server`:
 
 ```bash
 source .vscode/notebook.env
-export MCP_PORT NAT_TELEMETRY_ENABLED
+export MCP_PORT PHOENIX_PORT NAT_TELEMETRY_ENABLED
 ```
 
-This exports settings such as `MCP_PORT=8000` and
+This exports settings such as `MCP_PORT=8000`, `PHOENIX_PORT=6006`, and
 `NAT_TELEMETRY_ENABLED=false` so they are inherited by code-server, notebook
 kernels, and subprocesses launched by the notebooks.
 
@@ -295,4 +295,13 @@ For Docker Compose, the browser should redirect to:
 
 ```bash
 docker compose logs -f bootcamp-playbook
+```
+
+The MCP and Phoenix services launched from the notebooks write their output to
+`mcp.log` and `phoenix.log` in the repository root. Follow either file while
+troubleshooting a notebook service:
+
+```bash
+tail -f mcp.log
+tail -f phoenix.log
 ```
