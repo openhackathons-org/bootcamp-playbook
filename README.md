@@ -1,8 +1,11 @@
-# Workshop Demos
+# Agentic AI Bootcamp Playbook
 
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0) [![Python](https://img.shields.io/badge/python-%3E%3D3.13-blue.svg)](https://www.python.org/downloads/)
 
-Demos for the agentic AI workshop.
+This repository contains the hands-on content for the Agentic AI Bootcamp. The
+playbook takes participants from NVIDIA Nemotron inference and reasoning
+controls to an MCP-backed movie tool and a NeMo Agent Toolkit workflow, with
+Phoenix used to inspect the workflow and function spans that NAT exports.
 
 ## Contents
 
