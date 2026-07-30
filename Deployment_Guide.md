@@ -88,9 +88,8 @@ Load the shared, non-secret notebook settings into the same terminal that will
 start `code-server`:
 
 ```bash
-set -a
 source .vscode/notebook.env
-set +a
+export MCP_PORT NAT_TELEMETRY_ENABLED
 ```
 
 This exports settings such as `MCP_PORT=8000` and
