@@ -12,6 +12,6 @@ See the [Deployment Guide](Deployment_Guide.md) to set up the environment.
 
 The `notebooks/` folder contains three hands-on notebooks for NVIDIA Nemotron models, MCP tools, and NeMo Agent Toolkit workflows.
 
-- `01_simple_usage_notebook.ipynb`: end-to-end starter notebook covering basic chat completions, reasoning on/off, a LangChain v1.0 research assistant, and a multi-agent supervisor pattern.
+- `01_reasoning_controls_notebook.ipynb`: compare Nemotron thinking on and off, tune the reasoning budget, and explore low-effort reasoning.
 - `02_movie_database_mcp.ipynb`: build and validate a high-level MCP server that exposes the movie SQLite database through a `search_movies` tool.
-- `03_nemo_agent_toolkit.ipynb`: connect the movie MCP server to a Nemotron-powered ReAct agent and inspect workflow traces with Phoenix.
+- `03_nemo_agent_toolkit.ipynb`: connect the movie MCP server to a Nemotron-powered ReAct agent and inspect the workflow and function spans exported to Phoenix.
