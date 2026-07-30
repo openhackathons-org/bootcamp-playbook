@@ -25,7 +25,7 @@ Open the [NVIDIA API Catalog](https://build.nvidia.com/explore/discover) and
 select **Login**. Sign in with your NVIDIA developer account, or follow the
 registration prompts to create one.
 
-![NVIDIA API Catalog login button and account registration prompt](https://raw.githubusercontent.com/openhackathons-org/agentic-ai-bootcamp/a073be53b5fea70c8b8f263bc991b71bc8d5f163/tutorial/jupyter_notebook/images/nim-catalog.png)
+![NVIDIA API Catalog login button and account registration prompt](assets/nvidia-api-catalog-login.png)
 
 *The Login button opens the account registration and sign-in prompt.*
 
@@ -37,7 +37,7 @@ On the model page, select the Python input example or the deployment view, and
 then select **Get API Key**. The exact tabs can vary by model and as the catalog
 interface evolves.
 
-![NVIDIA model deployment page showing the Get API Key button](https://raw.githubusercontent.com/openhackathons-org/agentic-ai-bootcamp/a073be53b5fea70c8b8f263bc991b71bc8d5f163/tutorial/jupyter_notebook/images/catalog3_1.png)
+![NVIDIA model deployment page showing the Get API Key button](assets/nvidia-api-key-button.png)
 
 *The model page provides a Get API Key action before the deployment commands.*
 
