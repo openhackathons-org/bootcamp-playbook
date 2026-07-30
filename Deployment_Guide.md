@@ -37,9 +37,23 @@ The project requires Python 3.13. If it is not installed, install it with:
 uv python install 3.13
 ```
 
-### 2. Configure the model
+### 2. Configure the environment
 
-Set your NVIDIA API key in the same terminal that will start `code-server`:
+Load the shared, non-secret notebook settings into the same terminal that will
+start `code-server`:
+
+```bash
+set -a
+source .vscode/notebook.env
+set +a
+```
+
+This exports settings such as `MCP_PORT=8000` and
+`NAT_TELEMETRY_ENABLED=false` so they are inherited by code-server, notebook
+kernels, and subprocesses launched by the notebooks.
+
+Set your NVIDIA API key separately. Do not add secrets to
+`.vscode/notebook.env`, because that file is committed to the repository:
 
 ```bash
 export NVIDIA_API_KEY="your-api-key"
@@ -71,7 +85,8 @@ ignored.
 
 ### 4. Start code-server
 
-Run this command from the repository root:
+From the same terminal where you activated the environment, sourced
+`.vscode/notebook.env`, and exported `NVIDIA_API_KEY`, run:
 
 ```bash
 code-server --auth none --port 8888 "$PWD"
@@ -109,7 +124,7 @@ docker version
 docker compose version
 ```
 
-### 1. Configure the model
+### 1. Configure the environment
 
 Export your NVIDIA API key before starting Compose:
 
@@ -123,7 +138,9 @@ You may also override the default model:
 export NEMOTRON_MODEL="nvidia/nemotron-3-super-120b-a12b"
 ```
 
-Compose also loads the non-secret settings in `.vscode/notebook.env`.
+Compose automatically loads the non-secret container settings in
+`.vscode/notebook.env`; you do not need to source that file for the Docker
+workflow. Keep secrets such as `NVIDIA_API_KEY` out of the committed file.
 
 ### 2. Build and start the environment
 
