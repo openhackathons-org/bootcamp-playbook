@@ -13,7 +13,7 @@ Both options require:
 - An [NVIDIA API key](#obtain-an-nvidia-api-key)
 - Ports `8888` (code-server) and `6006` (Phoenix) available on the host
 
-## Step 0: Clone the repository
+## Clone the repository
 
 Clone the [bootcamp-playbook repository](https://github.com/openhackathons-org/bootcamp-playbook)
 and enter its directory:
